@@ -1,0 +1,25 @@
+Comentários da Live/Gravação
+
+ '''Roteiro'''
+--------------------------------------------------
+    Avisos gerais:
+        > Live está sendo gravada
+        > Ficará disponível no SIGAA
+        > Ao acessar, você concorda em ser gravado
+        > Habilitar mic/cam somente quando necessário
+    Revisão do conteúdo já trabalhado;
+    Deploy (HEROKU, pythonanywhere);
+    Próximos conteúdos e atividades:
+        > Configurando SGBDs
+        > Detalhes sobre o projeto
+        > Desenvolvimento do primeira etapa projeto
+        > Criação/extensão dos usuários
+        > Extensão dos formulário
+        > Tópicos adicionais em Django
+    Dúvidas gerais.
+
+----------------------------------------------------
+
+Padrão muito comum ->   M V C
+Django             ->   M T V
+
