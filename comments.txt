@@ -1,7 +1,6 @@
 Comentários da Live/Gravação
 
  '''Roteiro'''
---------------------------------------------------
     Avisos gerais:
         > Live está sendo gravada
         > Ficará disponível no SIGAA
@@ -16,8 +15,8 @@ Comentários da Live/Gravação
         > Criação/extensão dos usuários
         > Extensão dos formulário
         > Tópicos adicionais em Django
+--------------------------------------------------
     Dúvidas gerais.
-
 ----------------------------------------------------
 
 Padrão muito comum ->   M V C

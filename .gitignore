@@ -1,6 +1,11 @@
+# Virtual enviroment
 myvenv
 
-
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
 
 
 # Byte-compiled / optimized / DLL files
@@ -59,12 +64,6 @@ coverage.xml
 # Translations
 *.mo
 *.pot
-
-# Django stuff:
-*.log
-local_settings.py
-db.sqlite3
-db.sqlite3-journal
 
 # Flask stuff:
 instance/
