@@ -5,3 +5,7 @@ Comentários da videoaula
     1) Como criar um template para 404
     2) Como modificar um projeto Django
         > Ideias para a atividade avaliativa
+        > Contar os acessos por Post
+        > Contar Likes
+            > Um por like por usuário/post
+
