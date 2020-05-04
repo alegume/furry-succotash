@@ -31,9 +31,9 @@
                     {{ post.views }} views &nbsp; | &nbsp;
                     <a href="{% url 'post_like' pk=post.pk %}">
                         {% if liked %}
-                        <span class="glyphicon glyphicon-heart liked"></span>
+                            <span class="glyphicon glyphicon-heart liked"></span>
                         {% else %}
-                        <span class="glyphicon glyphicon-heart"></span>
+                            <span class="glyphicon glyphicon-heart"></span>
                         {% endif %}
                     </a>
                     {{ post.likes_count }} &nbsp; | &nbsp;
