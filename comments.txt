@@ -2,10 +2,15 @@ Comentários da videoaula
 
   *Roteiro*
 
-    1) Como criar um template para 404
-    2) Como modificar um projeto Django
-        > Ideias para a atividade avaliativa
-        > Contar os acessos por Post
-        > Contar Likes
-            > Um por like por usuário/post
-
+    0) Introdução
+    1) Importar App de polls
+        - Copiar diretório
+        - Configurar Settings
+        - ./manage.py makemigrations polls
+        - ./manage.py migrate polls
+        - Configurar urls.py (projeto)
+        - Ligar as aplicações
+        - Extender template base
+    3) Apresentar o App polls
+    4) Introdução aos testes automatizados com Django
+    5) Agendar uma Meet
