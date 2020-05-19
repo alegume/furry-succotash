@@ -3,14 +3,10 @@ Comentários da videoaula
   *Roteiro*
 
     0) Introdução
-    1) Importar App de polls
-        - Copiar diretório
-        - Configurar Settings
-        - ./manage.py makemigrations polls
-        - ./manage.py migrate polls
-        - Configurar urls.py (projeto)
-        - Ligar as aplicações
-        - Extender template base
-    3) Apresentar o App polls
-    4) Introdução aos testes automatizados com Django
-    5) Agendar uma Meet
+    1) Login/logout
+    3) Templates
+    ---------------------------
+    4) Criação de usuários
+    ---------------------------
+    5) Resetar senha
+    6) Customizar User Model
