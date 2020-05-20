@@ -15,8 +15,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog.apps.BlogConfig',
-    'polls.apps.PollsConfig'
+    'polls.apps.PollsConfig',
+    'users.apps.UsersConfig'
 ]
+
+AUTH_USER_MODEL = 'users.CustomUser'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

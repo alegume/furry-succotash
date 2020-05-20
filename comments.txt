@@ -6,7 +6,7 @@ Comentários da videoaula
     1) Login/logout
     3) Templates
     ---------------------------
-    4) Criação de usuários
+    4) Customizar User Model
     ---------------------------
-    5) Resetar senha
-    6) Customizar User Model
+    5) Criação de usuários
+    6) Resetar senha
