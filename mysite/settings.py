@@ -88,6 +88,7 @@ LANGUAGE_CODE = 'pt-br'
 
 TIME_ZONE = 'America/Bahia'
 
+TIME_INPUT_FORMATS = '%d/%m/%Y'
 
 USE_I18N = True
 
