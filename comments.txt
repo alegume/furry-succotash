@@ -8,10 +8,10 @@ Comentários da videoaula
     4) Customizar User Model
     5) Criação de usuários
         - Alteração de usuários
-    ---------------------------
     Errata:  O formato de datas precisa ser uma lista ou tupla
-    * NÃO pode ser string * 
+    * NÃO pode ser string *
 
     TIME_INPUT_FORMATS = ('%d/%m/%Y', )
     ---------------------------
     6) Resetar senha
+    ---------------------------
