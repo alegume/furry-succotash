@@ -1,17 +1,18 @@
 Comentários da videoaula
 
-  *Roteiro*
-
-    0) Introdução
-    1) Login/logout
-    3) Templates
-    4) Customizar User Model
-    5) Criação de usuários
-        - Alteração de usuários
-    Errata:  O formato de datas precisa ser uma lista ou tupla
-    * NÃO pode ser string *
-
-    TIME_INPUT_FORMATS = ('%d/%m/%Y', )
-    ---------------------------
-    6) Resetar senha
+  * Upload imagens/documentos *
+    0) Introdução:
+        - Instalar Pillow para manipular imagens (Uma vez apenas)
+            python -m pip install Pillow
+    0.1) Adicionar campos no models.py
+    1) Adicionar constantes de configuração (settings.py):
+        MEDIA_URL = '/media/'
+        MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+    2) Adicionar configuração em TEMPLATES (settings.py):
+        'django.template.context_processors.media'
+    3) Adicionar urls de acesso aos arquivos em modo de debug em urls.py *do projeto*.
+    4) Adicionar o atributo enctype="multipart/form-data" no HTML do formulário
+    5) Adicionar campos em forms.py
+    6) Adicionar request.FILES no form de views.py
+    7) Adicionar elementos do HTML no template
     ---------------------------
