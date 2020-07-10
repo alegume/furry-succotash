@@ -26,13 +26,17 @@
         </div>
         <div class="row">
             <div class="col">
-                <p>
-                    <img src="{{ post.cover.url }}" alt="{{ post.title }}"  style="max-width: 400px;" />
-                </p>
+                {% if post.cover %}
+                    <p>
+                        <img src="{{ post.cover.url }}" alt="{{ post.title }}"  style="max-width: 400px;" />
+                    </p>
+                {% endif %}
                 <p>{{ post.text|linebreaksbr }}</p>
-                <p>
-                    <a href="{{ post.attachment.url }}" download>Attachment!</a>
-                </p>
+                {% if post.attachment %}
+                    <p>
+                        <a href="{{ post.attachment.url }}" download>Attachment!</a>
+                    </p>
+                {% endif %}
                 <div class="date heart">
                     {{ post.views }} views &nbsp; | &nbsp;
                     <a href="{% url 'post_like' pk=post.pk %}">
@@ -44,6 +48,13 @@
                     </a>
                     {{ post.likes_count }} &nbsp; | &nbsp;
                     {{ percent|floatformat:2 }} %
+                </div>
+                <div class="date heart">
+                    {% for tag in post.tags.all %}
+                        {{ tag }}
+                    {% empty %}
+                        no tags =/
+                    {% endfor %}
                 </div>
             </div>
         </div>

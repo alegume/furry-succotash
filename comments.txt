@@ -1,6 +1,15 @@
 Comentários da videoaula
 
   * Many to Many *
-    0) Introdução:
-        
+    0) Introdução
+        -> Documentação
+    1) Exemplo
+        -> models
+        -> testar com admin
+        -> visualizar com templates
+        -> criar urls/views/template e link para tags
+        -> criar urls/views/template para tag_new
+        -> editar post_new e post_edit com form.save_m2m() -> commit=False
+    2) Customizar
+        -> forms.py
     ---------------------------

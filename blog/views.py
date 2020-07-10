@@ -4,8 +4,8 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import get_user_model
 
 from users.forms import CustomUserChangeForm
-from .models import Post, Comment, PostLike
-from .forms import PostForm, CommentForm
+from .models import Post, Comment, PostLike, Tag
+from .forms import PostForm, CommentForm, TagForm
 
 def post_list(request):
     posts = Post.objects.filter(
@@ -45,6 +45,7 @@ def post_new(request):
             # Comentei linha abaixo pois nao quero que seja publicado
             # post.publish()
             post.save()
+            form.save_m2m()
             return redirect('post_detail', pk=post.pk)
     else:
         form = PostForm()
@@ -61,6 +62,7 @@ def post_edit(request, pk):
             post.author = request.user
             post.published_date = timezone.now()
             post.save()
+            form.save_m2m()
             return redirect('post_detail', pk=post.pk)
     else:
         form = PostForm(instance=post)
@@ -150,3 +152,21 @@ def user_edit(request, pk):
         form = CustomUserChangeForm(instance=user)
 
     return render(request, 'blog/user_edit.html', {'form': form})
+
+def tag_new(request):
+    if request.method == 'POST':
+        form = TagForm(request.POST)
+        if form.is_valid():
+            tag = form.save()
+            posts = form.cleaned_data['posts']
+            for post in posts:
+                tag.post_set.add(post)
+        return redirect('tag_list')
+    else:
+        form = TagForm()
+    return render(request, 'blog/tag_edit.html', {'form': form})
+
+def tag_list(request):
+    tags = Tag.objects.all()
+
+    return render(request, 'blog/tag_list.html', {'tags': tags})

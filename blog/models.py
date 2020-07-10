@@ -11,6 +11,7 @@ class Post(models.Model):
     views = models.BigIntegerField(default=0)
     cover = models.ImageField(blank=True, default=None, upload_to='images/%Y/%m/')
     attachment = models.FileField(blank=True, default=None, upload_to='attachment')
+    tags = models.ManyToManyField('blog.Tag')
 
     def publish(self):
         self.published_date = timezone.now()
@@ -24,6 +25,12 @@ class Post(models.Model):
 
     def __str__(self):
         return '{} ({})'.format(self.title, self.author)
+
+class Tag(models.Model):
+    name = models.CharField(max_length=30)
+
+    def __str__(self):
+        return self.name
 
 class PostLike(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
