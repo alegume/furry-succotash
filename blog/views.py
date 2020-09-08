@@ -158,9 +158,6 @@ def tag_new(request):
         form = TagForm(request.POST)
         if form.is_valid():
             tag = form.save()
-            posts = form.cleaned_data['posts']
-            for post in posts:
-                tag.post_set.add(post)
         return redirect('tag_list')
     else:
         form = TagForm()

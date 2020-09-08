@@ -15,14 +15,7 @@ class CommentForm(forms.ModelForm):
         fields = ('author', 'text',)
 
 class TagForm(forms.ModelForm):
-    choices = [(post.pk, post.title) for post in Post.objects.all()]
-    posts = forms.MultipleChoiceField(
-        required=False,
-        choices=choices,
-        widget=forms.CheckboxSelectMultiple
-    )
-
 
     class Meta:
         model = Tag
-        fields = ('name', 'posts', )
+        fields = ('name', )
